@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nude Project</title>
+    <link rel="stylesheet" href="../css/NudeProject.css">
+    <link rel="icon" href="../img/NPLogoPagina.png" type="image/x-icon">
+</head>
+
+<body>
+    <div>
+        <!----------------MENÚ DESPLEGABLE LATERAL------------------>
+        <div class="btn_menu">
+            <label for="btn_menu">
+                <div class="div_menu">
+                    <img src="../img/menu.png" class="img_menu" id="menuImg">
+                    <h2 class="titulo">NUDE PROJECT®</h2>
+                </div>
+            </label>
+        </div>
+
+        <input type="checkbox" id="btn_menu">
+
+        <div class="container_menu">
+            <div class="cont_menu">
+                <nav>
+                    <a href="#hoodies">Hoodies</a>
+                    <a href="#tees">Tees</a>
+                    <a href="#pants">Pants</a>
+                </nav>
+                <label for="btn_menu" class="icon-equis" id="equis">X</label>
+            </div>
+        </div>
+        <!---------------------------------------------------------->
+
+        <div class="div_NP">
+            <a href="https://nude-project.com/" target="_blank"><img src="../img/NP-blanco.png" class="img_NP"></a>
+        </div>
+    </div>
+
+    <!-----------------------CARRUSEL DE IMÁGENES---------------------->
+    <div class="carousel">
+        <div class="carousel-slide">
+            <img src="https://media.revistagq.com/photos/615436511d29f507cd989fc0/16:9/w_2560%2Cc_limit/004422--23--VK11062021_copy%2520(1).jpg"
+                alt="Imagen 1">
+            <img src="https://nude-project.com/cdn/shop/files/123_1024x.jpg?v=1726590796" alt="Imagen 2">
+            <img src="https://www.cervezasalhambra.com/storage/app/uploads/public/644/268/e05/644268e05a07e679955216.jpg"
+                alt="Imagen 3">
+        </div>
+    </div>
+
+    <script>
+        const slide = document.querySelector('.carousel-slide');
+        const images = document.querySelectorAll('.carousel-slide img');
+        let currentIndex = 0;
+        const intervalTime = 5000;
+
+        function showNextImage() {
+            currentIndex++;
+            if (currentIndex >= images.length) {
+                currentIndex = 0;
+            }
+            // Mover el contenedor de las imágenes hacia la izquierda para mostrar la siguiente
+            slide.style.transform = `translateX(${-currentIndex * 100}vw)`;
+   
+        }
+
+        // Cambiar imágenes cada 5 segundos
+        setInterval(showNextImage, intervalTime);
+    </script>
+
+    <script>
+        const menuLinks = document.querySelectorAll('.cont_menu nav a'); // Selecciona los enlaces del menú
+        const btnMenu = document.getElementById('btn_menu'); // Selecciona el checkbox que controla el menú
+
+        // Añadir un listener a cada enlace
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                btnMenu.checked = false; // Desmarcar el checkbox al hacer clic en un enlace
+            });
+        });
+    </script>
+    <!----------------------------------------------------------------->
+
+    <p id="hoodies" class="titulo_ropa">HOODIES</p>
+    <div class="fotos_ropa">
+        <div class="ropa_item">
+            <a
+                href="https://nude-project.com/products/nude-tour-plane-hood-brown?pr_prod_strat=jac&pr_rec_id=204160aee&pr_rec_pid=8836032889156&pr_ref_pid=8843307155780&pr_seq=uniform">
+                <div class="image_container">
+                    <img src="https://nude-project.com/cdn/shop/files/NUDETOUR_HOODCHOCOLATE_back_800x.jpg?v=1716973153"
+                        alt="Foto 1" class="imagen_ropa normal">
+                    <img src="https://nude-project.com/cdn/shop/files/23_3767bfd0-db4d-4f3e-98cf-48c22e7d5212_800x.jpg?v=1714722623"
+                        class="imagen_ropa hover">
+                </div>
+            </a>
+            <p class="nombre_camiseta">NUDE TOUR* HOOD CHOCOLATE</p>
+            <p class="precio">€89</p>
+        </div>
+        <div class="ropa_item">
+            <a href="https://nude-project.com/collections/hoodies/products/time-hood-grey-melange">
+                <div class="image_container">
+                    <img src="https://nude-project.com/cdn/shop/files/TIMEHOODGREYMELANGEbackfake_back_800x.jpg?v=1716972971"
+                        alt="Foto 2" class="imagen_ropa normal">
+                    <img src="https://nude-project.com/cdn/shop/files/IMG_2194_model_800x.png?v=1716971067"
+                        class="imagen_ropa hover">
+                </div>
+            </a>
+            <p class="nombre_camiseta">TIME HOOD GREY MELANGE</p>
+            <p class="precio">€89</p>
+        </div>
+        <div class="ropa_item">
+            <a href="https://nude-project.com/collections/hoodies/products/cake-hood-red-xs">
+                <div class="image_container">
+                    <img src="https://nude-project.com/cdn/shop/files/LA_TARTE_HOOD_BURGUNDY_back_800x.jpg?v=1725987060"
+                        alt="Foto 3" class="imagen_ropa normal"><img
+                        src="https://nude-project.com/cdn/shop/files/WhatsAppImage2024-09-12at18.58.33_800x.png?v=1726160986"
+                        class="imagen_ropa hover">
+                </div>
+            </a>
+            <p class="nombre_camiseta">LA TARTE HOOD BURGUNDY</p>
+            <p class="precio">€89</p>
+        </div>
+        <div class="ropa_item">
+            <a href="https://nude-project.com/collections/hoodies/products/cherry-hood-pt-2-pink-xs">
+                <div class="image_container">
+                    <img src="https://nude-project.com/cdn/shop/files/CERISE_HOOD_PINK_front.jpg?v=1726064788"
+                        alt="Foto 4" class="imagen_ropa normal"><img
+                        src="https://nude-project.com/cdn/shop/files/Sintitulo-1_c809d687-cc53-48d2-babe-45c421e5b033_800x.png?v=1725962657"
+                        class="imagen_ropa hover">
+                </div>
+            </a>
+            <p class="nombre_camiseta">CERISE HOOD PINK</p>
+            <p class="precio">€79</p>
+        </div>
+        <div class="ropa_item">
+            <a href="https://nude-project.com/collections/hoodies/products/cherry-hood-marshmallow">
+                <div class="image_container">
+                    <img src="https://nude-project.com/cdn/shop/files/CHERRYHOODOFF-WHITE_back_fb1e17a3-fa6e-461c-be1c-77764533177c_800x.jpg?v=1725535381"
+                        alt="Foto 5" class="imagen_ropa normal"><img
+                        src="https://nude-project.com/cdn/shop/files/IMG_9296_model_800x.png?v=1725535386"
+                        class="imagen_ropa hover">
+                </div>
+            </a>
+            <p class="nombre_camiseta">CHERRY HOOD MARSHMALLOW</p>
+            <p class="precio">€89</p>
+        </div>
+        <div class="ropa_item">
+            <a href="https://nude-project.com/collections/hoodies/products/ink-graphic-rodeo-hood-brown-xs">
+                <div class="image_container">
+                    <img src="https://nude-project.com/cdn/shop/files/CHEVAL_HOOD_BROWN_front_a66cdb08-8eb9-4289-a95d-006082d49ec3_800x.jpg?v=1726064854"
+                        alt="Foto 6" class="imagen_ropa normal"><img
+                        src="https://nude-project.com/cdn/shop/files/forondolodo_800x.png?v=1726832549"
+                        class="imagen_ropa hover">
+                </div>
+            </a>
+            <p class="nombre_camiseta">CHEVAL HOOD BROWN</p>
+            <p class="precio">€89</p>
+        </div>
+    </div>
+
+    <p id="tees" class="titulo_ropa">TEES</p>
+    <div class="fotos_ropa">
+        <div class="ropa_item">
+            <a
+                href="https://nude-project.com/products/time-tee-marshmallow?pr_prod_strat=jac&pr_rec_id=c3ec8a8ea&pr_rec_pid=9095802913092&pr_ref_pid=8370395021636&pr_seq=uniform">
+                <div class="image_container">
+                    <img src="https://nude-project.com/cdn/shop/files/TIMETEEMARSHMALLOW_back.jpg?v=1718182591"
+                        alt="Foto 1" class="imagen_ropa normal"><img
+                        src="https://nude-project.com/cdn/shop/files/IMG_2970_model.png?v=1718182719"
+                        class="imagen_ropa hover">
+                </div>
+            </a>
+            <p class="nombre_camiseta">TIME TEE MARSHMALLOW</p>
+            <p class="precio">€45</p>
+        </div>
+        <div class="ropa_item">
+            <a href="https://nude-project.com/collections/t-shirts-nude-project/products/pinte-tee-ash">
+                <div class="image_container">
+                    <img src="https://nude-project.com/cdn/shop/files/PEACH_TEE_ASH_front.jpg?v=1719568833" alt="Foto 2"
+                        class="imagen_ropa normal">
+                    <img src="https://nude-project.com/cdn/shop/files/IMG_6106.png?v=1723124481"
+                        class="imagen_ropa hover">
+                </div>
+            </a>
+            <p class="nombre_camiseta">PESSEGO TEE ASH</p>
+            <p class="precio">€45</p>
+        </div>
+        <div class="ropa_item">
+            <a href="https://nude-project.com/collections/t-shirts-nude-project/products/solet-tee-marshmallow">
+                <div class="image_container">
+                    <img src="https://nude-project.com/cdn/shop/files/2_9045f9c7-5091-46cf-9dba-06f0a8bfe58f_800x.jpg?v=1720525996"
+                        alt="Foto 3" class="imagen_ropa normal"><img
+                        src="https://nude-project.com/cdn/shop/files/IMG_7628.jpg?v=1720793555"
+                        class="imagen_ropa hover">
+                </div>
+            </a>
+            <p class="nombre_camiseta">SOLET TEE MARSHMALLOW</p>
+            <p class="precio">€45</p>
+        </div>
+        <div class="ropa_item">
+            <a href="https://nude-project.com/collections/t-shirts-nude-project/products/virginity-tee-baby-blue">
+                <div class="image_container">
+                    <img src="https://nude-project.com/cdn/shop/files/VIRGINITYTEEBABYBLUEback_d7f1e2e2-32fd-483c-a68d-f7e85bd4eb75_back_800x.jpg?v=1716890802"
+                        alt="Foto 4" class="imagen_ropa normal"><img
+                        src="https://nude-project.com/cdn/shop/files/Sintitulo-1copia52_model.jpg?v=1716824882"
+                        class="imagen_ropa hover">
+                </div>
+            </a>
+            <p class="nombre_camiseta">VIRGINITY TEE BABY BLUE</p>
+            <p class="precio">€45</p>
+        </div>
+        <div class="ropa_item">
+            <a
+                href="https://nude-project.com/collections/t-shirts-nude-project/products/ink-graphic-tee-1-rodeo-cream-xs">
+                <div class="image_container">
+                    <img src="https://nude-project.com/cdn/shop/files/6_84e46ec3-c8ea-4790-90e0-fbd46c5591f5.jpg?v=1724938551"
+                        alt="Foto 5" class="imagen_ropa normal"><img
+                        src="https://nude-project.com/cdn/shop/files/RODEODEF--51.png?v=1725898589"
+                        class="imagen_ropa hover">
+                </div>
+            </a>
+            <p class="nombre_camiseta">RODEO TEE VAINILLA</p>
+            <p class="precio">€45</p>
+        </div>
+        <div class="ropa_item">
+            <a
+                href="https://nude-project.com/products/locally-hated-tee-white?pr_prod_strat=jac&pr_rec_id=d5817ef26&pr_rec_pid=8917861794116&pr_ref_pid=9082017972548&pr_seq=uniform">
+                <div class="image_container">
+                    <img src="https://nude-project.com/cdn/shop/files/LOCALLYHATEDTEEWHITEback_1bb2aacd-1599-4f8f-9cb3-6c251c31c1c2_front.jpg?v=1716890927"
+                        alt="Foto 6" class="imagen_ropa normal"><img
+                        src="https://nude-project.com/cdn/shop/files/lcoallyhated_model.png?v=1716824905"
+                        class="imagen_ropa hover">
+                </div>
+            </a>
+            <p class="nombre_camiseta">LOCALLY HATED TEE WHITE</p>
+            <p class="precio">€45</p>
+        </div>
+    </div>
+
+    <p id="pants" class="titulo_ropa">PANTS</p>
+    <div class="fotos_ropa">
+        <div class="ropa_item">
+            <a href="https://nude-project.com/collections/pants-nude-project/products/badepa-npstar-xs">
+                <div class="image_container">
+                    <img src="https://nude-project.com/cdn/shop/files/BADEPANPSTAR_front_800x.jpg?v=1725522507"
+                        alt="Foto 1" class="imagen_ropa normal"><img
+                        src="https://nude-project.com/cdn/shop/files/RODEODEF--86.png?v=1726474729"
+                        class="imagen_ropa hover">
+                </div>
+            </a>
+            <p class="nombre_camiseta">LA STAR DENIM PANTS</p>
+            <p class="precio">€109</p>
+        </div>
+        <div class="ropa_item">
+            <a
+                href="https://nude-project.com/products/badepa-5-fw24?pr_prod_strat=e5_desc&pr_rec_id=84299f3ff&pr_rec_pid=9531409367364&pr_ref_pid=9466309968196&pr_seq=uniform">
+                <div class="image_container">
+                    <img src="https://nude-project.com/cdn/shop/files/BADEPASHOOTINGBULLETLASER_front_800x.jpg?v=1725522393"
+                        alt="Foto 2" class="imagen_ropa normal"><img
+                        src="https://nude-project.com/cdn/shop/files/IMG_3627.png?v=1726474728"
+                        class="imagen_ropa hover">
+                </div>
+            </a>
+            <p class="nombre_camiseta">COEUR DENIM PANTS</p>
+            <p class="precio">€109</p>
+        </div>
+        <div class="ropa_item">
+            <a
+                href="https://nude-project.com/products/onda-beach-longpants-green?pr_prod_strat=e5_desc&pr_rec_id=527a0c1ff&pr_rec_pid=8995713745220&pr_ref_pid=9531448230212&pr_seq=uniform">
+                <div class="image_container">
+                    <img src="https://nude-project.com/cdn/shop/files/ONDABEACHPANTSGREEN_front_800x.jpg?v=1716885991"
+                        alt="Foto 3" class="imagen_ropa normal"><img
+                        src="https://nude-project.com/cdn/shop/files/IMG_09392_model.jpg?v=1716565208"
+                        class="imagen_ropa hover">
+                </div>
+            </a>
+            <p class="nombre_camiseta">PEACE CHECKERED PANTS</p>
+            <p class="precio">€79</p>
+        </div>
+        <div class="ropa_item">
+            <a
+                href="https://nude-project.com/products/volado-carpenter-raw-fw24?pr_prod_strat=e5_desc&pr_rec_id=527a0c1ff&pr_rec_pid=9531448099140&pr_ref_pid=9531448230212&pr_seq=uniform">
+                <div class="image_container">
+                    <img src="https://nude-project.com/cdn/shop/files/VOLADO_CARPENTER_RAW_front_b2630cc5-2d84-4f3d-bee1-199a4aef08ba_800x.jpg?v=1725877126"
+                        alt="Foto 1" class="imagen_ropa normal"><img
+                        src="https://nude-project.com/cdn/shop/files/IMG_4987.png?v=1725899579"
+                        class="imagen_ropa hover">
+                </div>
+            </a>
+            <p class="nombre_camiseta">CARPENTER PANTS OFFWHITE</p>
+            <p class="precio">€99</p>
+        </div>
+        <div class="ropa_item">
+            <a href="https://nude-project.com/products/favi-pant-black">
+                <div class="image_container">
+                    <img src="https://nude-project.com/cdn/shop/files/4_8e03fc6e-dabe-4493-922c-4a3ae37af415_800x.jpg?v=1724408728"
+                        alt="Foto 2" class="imagen_ropa normal"><img
+                        src="https://nude-project.com/cdn/shop/files/ProCam-IMG-0065.jpg?v=1726847849"
+                        class="imagen_ropa hover">
+                </div>
+            </a>
+            <p class="nombre_camiseta">CORE PANT BLACK</p>
+            <p class="precio">€89</p>
+        </div>
+        <div class="ropa_item">
+            <a
+                href="https://nude-project.com/products/jala-pants-olive-green?pr_prod_strat=e5_desc&pr_rec_id=8da41cb38&pr_rec_pid=8858993688900&pr_ref_pid=9531448099140&pr_seq=uniform">
+                <div class="image_container">
+                    <img src="https://nude-project.com/cdn/shop/files/ARMY_CARGO_PANTS_GREEN_front_800x.jpg?v=1725615057"
+                        alt="Foto 3" class="imagen_ropa normal"><img
+                        src="https://nude-project.com/cdn/shop/files/IMG_3034_model.heic?v=1725615065"
+                        class="imagen_ropa hover">
+                </div>
+            </a>
+            <p class="nombre_camiseta">ARMY CARGO PANTS GREEN</p>
+            <p class="precio">€89</p>
+        </div>
+    </div>
+
+    <div style="text-align: center;">
+        <iframe
+            style="border-radius:12px; margin-left: 30px; margin-right: 30px; margin-top: 30px; box-shadow: 0px 10px 10px rgb(117, 117, 117);"
+            src="https://open.spotify.com/embed/track/5hVghJ4KaYES3BFUATCYn0?utm_source=generator&theme=0" width="90%"
+            height="352" frameBorder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <hr class="linea_separadora">
+
+</body>
+
+<footer class="footer">
+
+    <div class="div_NP_footer">
+        <a href="https://nude-project.com/"><img src="../img/NP.png" class="img_NP_footer"></a>
+    </div>
+
+    <div class="div_footer_inicio">
+        <div class="redes_sociales">
+            <a href="https://www.instagram.com/nudeproject/" class="redes_sociales_img" target="_blank" title="Instagram">
+                <img src="../img/Instagram.png">
+            </a>
+            <a href="https://www.youtube.com/@NUDEPROJECT" class="redes_sociales_img" target="_blank" title="Youtube">
+                <img src="../img/youtube.png">
+            </a>
+            <a href="https://x.com/nudeproject_" class="redes_sociales_img" target="_blank" title="Twiteer">
+                <img src="../img/twiteer-X.png">
+            </a>
+            <a href="https://www.tiktok.com/@nudeproject" class="redes_sociales_img" target="_blank" title="Tik Tok">
+                <img src="../img/tiktok.png" alt="TikTok">
+            </a>
+            <a href="mailto:help@nude-project.com" class="redes_sociales_img" target="_blank" title="Correo">
+                <img src="../img/correo.png">
+            </a>
+        </div>
+
+
+        <div class="email-signup">
+            <p>SIGN UP TO OUR EMAIL LIST AND GET 10% OFF YOUR FIRST ORDER</p>
+            <form action="#" method="post">
+                <input type="email" placeholder="Email address" id="correo" required>
+                <button type="submit" onclick="mandarAlerta();">JOIN</button>
+            </form>
+        </div>
+
+        <script>
+            function mandarAlerta() {
+                if (document.getElementById("correo").value != 0) {
+                    alert("Bienvenido a Nude Project");
+                }
+            }
+        </script>
+
+        <div class="div_footer_final">
+            <p class="p_footer_final">© NUDE PROJECT</p>
+        </div>
+</footer>
+
+</html>

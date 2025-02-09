@@ -1,0 +1,391 @@
+@font-face {
+    font-family: 'Relationship of Melodrame';
+    src: url('../fondos/relationship_of_melodrame/Relationship\ of\ mélodrame.ttf') format('truetype');
+    /* Cambia el formato según el archivo (.otf o .ttf) */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HELVETICANOWDISPLAY';
+    src: url('https://cdn.shopify.com/s/files/1/0025/3725/9054/files/HelveticaNowDisplay-Black.ttf?v=1705059047');
+    /* Cambia el formato según el archivo (.otf o .ttf) */
+    font-style: 0;
+    font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: 'HELVETICANOWDISPLAY', sans-serif;
+    background-color: rgb(243, 240, 236);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.btn_menu {
+    background-color: rgb(243, 240, 236);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.titulo {
+    color: rgb(74, 39, 24);
+    margin: 0;
+    /* Aseguramos que el título no tenga margen extra */
+    padding-bottom: 10px;
+    /* Espaciado entre imagen y texto */
+    padding-top: 10px;
+    padding-right: 50px;
+    flex-grow: 1;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.div_menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.img_menu {
+    width: 30px;
+    /* Tamaño de la imagen */
+    cursor: pointer;
+    /* Hace que el cursor cambie al pasar sobre la imagen */
+    margin-left: 40px;
+    /* Alineación a la izquierda */
+    margin-top: 9px;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.img_menu:hover {
+    transform: scale(1.1);
+    opacity: 80%;
+}
+
+.div_NP {
+    margin-top: 75px;
+    background-color: #351c11;
+    text-align: center;
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
+.img_NP {
+    width: 30px;
+    padding-top: 13px;
+    padding-bottom: 10px;
+}
+
+/*MENÚ LATERAL DESPLEGABLE*/
+#btn_menu {
+    display: none;
+}
+
+.container_menu {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+}
+
+#btn_menu:checked~.container_menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cont_menu {
+    width: 100%;
+    max-width: 250px;
+    background: rgb(53, 28, 17);
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+    padding-top: 10px;
+    font-family: 'Relationship of Melodrame', Arial, sans-serif;
+    font-size: 25px;
+    box-shadow: 5px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 20;
+}
+
+#btn_menu:checked~.container_menu .cont_menu {
+    transform: translateX(0%);
+}
+
+.cont_menu nav {
+    transform: translateY(15%);
+}
+
+.cont_menu a {
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: rgb(243, 240, 236);
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+    text-shadow: 0px 0px 8px rgb(255, 255, 255);
+}
+
+.cont_menu nav a:hover {
+    border-left: 5px solid rgb(243, 240, 236);
+    background: rgb(37, 19, 12);
+}
+
+.cont_menu label {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: rgb(243, 240, 236);
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.icon-equis {
+    padding-right: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(243, 240, 236);
+}
+
+.icon-equis:hover {
+    color: rgb(207, 206, 206);
+}
+
+/*-------------CARRUSEL DE IMÁGENES-------------*/
+.carousel {
+    position: relative;
+    width: 100vw;
+    /* 100% del ancho de la ventana */
+    height: auto;
+    overflow: hidden;
+    /* Oculta las imágenes que no están visibles */
+    z-index: 1;
+    /* Carrusel por debajo del menú lateral */
+}
+
+.carousel-slide {
+    display: flex;
+    width: 300vw;
+    /* 3 imágenes = 3 veces el ancho de la ventana */
+    transition: transform 1s ease;
+    /* Transición suave */
+}
+
+.carousel-slide img {
+    width: 100vw;
+    /* Cada imagen ocupa 100% del ancho de la ventana */
+    height: auto;
+    /* Mantener la proporción de las imágenes */
+    object-fit: cover;
+    /* Asegura que la imagen cubra todo el área sin deformarse */
+}
+
+/*--------------------ROPA-----------------------*/
+.titulo_ropa {
+    /*text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);*/
+    margin-left: 3%;
+    color: #482518;
+    padding-top: 10px;
+    font-size: 130%;
+}
+
+.fotos_ropa {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.ropa_item {
+    text-align: left;
+}
+
+.ropa_item p {
+    margin: 3px 0;
+    color: rgb(72, 37, 24);
+    font-size: 85%;
+    padding-left: 2px;
+}
+
+.nombre_camiseta {
+    padding-top: 3px;
+}
+
+.precio {
+    font-family: sans-serif, serif;
+}
+
+.imagen_ropa {
+    width: 100%;
+    height: auto;   
+}
+
+.image_container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.image_container img {
+    width: 100%;
+    display: block;
+}
+
+.image_container img.hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in;
+}
+
+.image_container:hover img.hover {
+    opacity: 1;
+    transform: scale(1.06);
+}
+
+.image_container:hover img.normal {
+    opacity: 0;
+}
+
+.linea_separadora {
+    width: 100%;
+    border: none;
+    border-top: 2px solid rgb(72, 38, 24);
+    margin-top: 40px;
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.redes_sociales {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 10px;
+    gap: 20px;
+}
+
+.redes_sociales_img {
+    width: 24px; /* Tamaño estricto del contenedor */
+    height: 24px; /* Asegura que el contenido no se desborde */
+}
+
+.redes_sociales_img img {
+    width: 100%; /* La imagen ocupará todo el contenedor pero no lo superará */
+    height: 100%; /* Igual para la altura */
+    transition: transform 0.3s ease;
+}
+
+.redes_sociales_img img:hover {
+    transform: scale(1.1); /* Efecto de hover para hacer un poco más grande la imagen al pasar el ratón */
+}
+
+.div_footer_inicio {
+    background-color: rgb(243, 240, 236);
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    padding-bottom: 20px;
+}
+
+.div_NP_footer {
+    justify-content: center;
+    text-align: center;
+}
+
+.img_NP_footer {
+    justify-content: center;
+    width: 100px;
+    height: auto;
+}
+
+.email-signup {
+    text-align: center;
+    background-color: rgb(243, 240, 236);
+    padding: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.email-signup p {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.email-signup form {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 20px;
+}
+
+.email-signup input[type="email"] {
+    padding: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 12px;    
+    background-color: rgb(243, 240, 236);
+    border: 1px solid rgb(53, 28, 17);
+    width: 250px;
+    color: rgb(53, 28, 17);
+}
+
+.email-signup button {
+    padding: 10px 20px;
+    background-color: rgb(53, 28, 17);
+    font-weight: bold;
+    border: 1px solid rgb(53, 28, 17);
+    color: #fff;
+    cursor: pointer;
+    font-size: 11px;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+
+.email-signup button:hover {
+    background-color: rgb(243, 240, 236);
+    color: rgb(53, 28, 17);
+}
+
+.div_footer_final {
+    background-color: rgb(53, 28, 17);
+    width: 100%;
+    font-size: 10px;
+    right: 0;
+    left: 0;
+    margin-bottom: -20px;
+}
+
+.p_footer_final {
+    text-align: center;
+    color: rgb(243, 240, 236);
+    padding: 20px;
+    margin: 0;
+    text-shadow: 0px 0px 8px rgb(255, 255, 255);
+}
